@@ -1,9 +1,12 @@
 import { expect } from 'chai';
 import t from '../dist/index';
 
-describe('xxx', () => {
-	it('xxx', () => {
-		t();
-		expect(1).not.eq(2);
+describe('storage set', () => {
+	it('set storage value', () => {
+		const key = 'mm';
+		const value = 'studio'
+		t(key, value);
+		const val = localStorage.getItem(key);
+		expect(value).eq(JSON.parse(val))
 	});
 });
